@@ -1,6 +1,6 @@
 package com.pluralsight;
 
-public class CarDealerShip {
+public class Program {
     public static void main(String[] args) {
 
     }
