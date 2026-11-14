@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class DealershipFileManager {
 
-    public Dealership  getDealership(String fileName) {
+    public Dealership getDealership(String fileName) {
 
         Dealership dealership = null;
 
@@ -50,6 +50,10 @@ public class DealershipFileManager {
         }
 
         return dealership;
+    }
+
+    public void saveDealership(Dealership dealership) {
+
     }
 
 }
