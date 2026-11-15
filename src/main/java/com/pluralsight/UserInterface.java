@@ -82,6 +82,11 @@ public class UserInterface {
 
     private void displayVehicles(ArrayList<Vehicle> vehicles) {
 
+            for (Vehicle vehicle : vehicles) {
+
+                System.out.println(vehicle);
+            }
+
     }
 
     private void processGetByPriceRequest() {
@@ -109,6 +114,9 @@ public class UserInterface {
     }
 
     private void processGetAllVehiclesRequest() {
+
+        ArrayList<Vehicle> vehicles = dealership.getAllVehicles();
+        displayVehicles(vehicles);
 
     }
 
