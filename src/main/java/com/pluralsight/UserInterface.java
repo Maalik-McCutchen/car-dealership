@@ -1,5 +1,6 @@
 package com.pluralsight;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -90,6 +91,18 @@ public class UserInterface {
     }
 
     private void processGetByPriceRequest() {
+
+        Scanner myScanner = new Scanner(System.in);
+
+        System.out.print("Enter minimum price: ");
+        BigDecimal minPrice = myScanner.nextBigDecimal();
+
+        System.out.print("Enter maximum price: ");
+        BigDecimal maxPrice = myScanner.nextBigDecimal();
+
+        ArrayList<Vehicle> vehicles = dealership.getVehiclesByPrice(minPrice, maxPrice);
+        displayVehicles(vehicles);
+
 
     }
 

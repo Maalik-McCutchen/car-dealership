@@ -2,6 +2,7 @@ package com.pluralsight;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Dealership {
 
@@ -44,7 +45,21 @@ public class Dealership {
     }
 
     public ArrayList<Vehicle> getVehiclesByPrice(BigDecimal minPrice, BigDecimal maxPrice) {
-        return null;
+        ArrayList<Vehicle> filterVehicle = new ArrayList<>();
+
+
+        for (Vehicle vehicle : inventory) {
+
+            BigDecimal price = vehicle.getPrice();
+
+            if (price.compareTo(minPrice) >= 0 && price.compareTo(maxPrice) <= 0) {
+                filterVehicle.add(vehicle);
+            }
+
+
+        }
+
+        return filterVehicle;
     }
 
     public ArrayList<Vehicle> getVehiclesByMakeModel (String make, String model) {
