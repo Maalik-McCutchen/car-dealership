@@ -137,6 +137,13 @@ public class UserInterface {
     }
 
     private void processGetByColorRequest() {
+        Scanner myScanner = new Scanner(System.in);
+
+        System.out.print("Enter color: ");
+        String color = myScanner.nextLine();
+
+        ArrayList<Vehicle> vehicles = dealership.getVehiclesByColor(color);
+        displayVehicles(vehicles);
 
     }
 
