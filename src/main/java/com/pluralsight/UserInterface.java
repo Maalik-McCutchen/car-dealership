@@ -90,7 +90,6 @@ public class UserInterface {
     }
 
     private void processGetByPriceRequest() {
-
         Scanner myScanner = new Scanner(System.in);
 
         System.out.print("Enter minimum price: ");
@@ -176,6 +175,35 @@ public class UserInterface {
     }
 
     private void processAddVehicleRequest() {
+        Scanner myScanner = new Scanner(System.in);
+
+        System.out.print("Enter vehicle vin: ");
+        int vin = myScanner.nextInt();
+
+        System.out.print("Enter vehicle year: ");
+        int year = myScanner.nextInt();
+        myScanner.nextLine();
+
+        System.out.print("Enter vehicle make: ");
+        String make = myScanner.nextLine();
+
+        System.out.print("Enter vehicle model: ");
+        String model = myScanner.nextLine();
+
+        System.out.print("Enter vehicle type: ");
+        String vehicleType = myScanner.nextLine();
+
+        System.out.print("Enter vehicle color: ");
+        String color = myScanner.nextLine();
+
+        System.out.print("Enter vehicle odometer: ");
+        int odometer = myScanner.nextInt();
+
+        System.out.print("Enter vehicle price: ");
+        BigDecimal price = myScanner.nextBigDecimal();
+
+        Vehicle vehicle = new Vehicle(vin, year, make, model, vehicleType, color, odometer, price);
+        dealership.addVehicle(vehicle);
 
     }
 
