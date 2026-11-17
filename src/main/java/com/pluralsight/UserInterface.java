@@ -87,7 +87,6 @@ public class UserInterface {
 
                 System.out.println(vehicle);
             }
-
     }
 
     private void processGetByPriceRequest() {
@@ -103,7 +102,6 @@ public class UserInterface {
         ArrayList<Vehicle> vehicles = dealership.getVehiclesByPrice(minPrice, maxPrice);
         displayVehicles(vehicles);
 
-
     }
 
     private void processGetByMakeModelRequest() {
@@ -117,8 +115,6 @@ public class UserInterface {
 
         ArrayList<Vehicle> vehicles = dealership.getVehiclesByMakeModel(make, model);
         displayVehicles(vehicles);
-
-
 
     }
 
@@ -148,6 +144,16 @@ public class UserInterface {
     }
 
     private void processGetByMileageRequest() {
+        Scanner myScanner = new Scanner(System.in);
+
+        System.out.print("Enter minimum mileage: ");
+        int minMileage = myScanner.nextInt();
+
+        System.out.print("Enter maximum mileage: ");
+        int maxMileage = myScanner.nextInt();
+
+        ArrayList<Vehicle> vehicles = dealership.getVehiclesByMileage(minMileage, maxMileage);
+        displayVehicles(vehicles);
 
     }
 
