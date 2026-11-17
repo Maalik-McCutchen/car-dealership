@@ -123,6 +123,16 @@ public class UserInterface {
     }
 
     private void processGetByYearRequest() {
+        Scanner myScanner = new Scanner(System.in);
+
+        System.out.print("Enter minimum year: ");
+        int minYear = myScanner.nextInt();
+
+        System.out.print("Enter maximum year: ");
+        int maxYear = myScanner.nextInt();
+
+        ArrayList<Vehicle> vehicles = dealership.getVehiclesByYear(minYear, maxYear);
+        displayVehicles(vehicles);
 
     }
 
