@@ -107,6 +107,18 @@ public class UserInterface {
     }
 
     private void processGetByMakeModelRequest() {
+        Scanner myScanner = new Scanner(System.in);
+
+        System.out.print("Enter vehicle make: ");
+        String make = myScanner.nextLine();
+
+        System.out.print("Enter vehicle model: ");
+        String model = myScanner.nextLine();
+
+        ArrayList<Vehicle> vehicles = dealership.getVehiclesByMakeModel(make, model);
+        displayVehicles(vehicles);
+
+
 
     }
 
