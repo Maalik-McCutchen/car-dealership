@@ -205,6 +205,9 @@ public class UserInterface {
         Vehicle vehicle = new Vehicle(vin, year, make, model, vehicleType, color, odometer, price);
         dealership.addVehicle(vehicle);
 
+        DealershipFileManager dealershipSaveFile = new DealershipFileManager();
+        dealershipSaveFile.saveDealership(dealership);
+
     }
 
     private void processRemoveVehicleRequest() {

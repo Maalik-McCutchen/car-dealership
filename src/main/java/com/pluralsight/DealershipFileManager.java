@@ -62,14 +62,19 @@ public class DealershipFileManager {
             String dealershipInfo = dealership.getName() + "|" + dealership.getAddress() + "|" + dealership.getPhone();
 
             writer.write(dealershipInfo);
+            writer.write("\n");
 
             for (Vehicle vehicle : dealership.getAllVehicles()) {
 
+                String vehicleInfo = vehicle.getVin() + "|" + vehicle.getYear() + "|" + vehicle.getMake() + "|" + vehicle.getModel() + "|" +
+                        vehicle.getVehicleType() + "|" + vehicle.getColor() + "|" + vehicle.getOdometer() + "|" + vehicle.getPrice();
+
+                writer.write(vehicleInfo);
+                writer.write("\n");
+
             }
 
-
-
-
+            writer.close();
 
         } catch (Exception e) {
             System.out.println("Something went wrong.");
