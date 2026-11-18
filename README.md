@@ -1,4 +1,4 @@
-# Project Title
+# Car-Dealership
 
 <!-- HOW TO USE THIS TEMPLATE
      Save it as README.md at the root of your project, next to pom.xml. Replace every comment like this one
@@ -91,9 +91,13 @@
      Optional GIF: LICEcap (free, Windows and Mac, <https://www.cockos.com/licecap/>) records a region of the
      screen straight to a .gif. Keep it under 10 seconds and under 10 MB, save it into `images`. -->
 
-![Main menu](images/menu.png)
+![Main menu](images/main-menu.png)
 
-![One feature in action](images/feature.png)
+![Add Vehicle](images/add-vehicle.png)
+![Add Vehicle CSV](images/add-vehicle-csv.png)
+
+![Remove Vehicle](images/remove-vehicle.png)
+![Remove Vehicle CSV](images/remove-vehicle-csv.png)
 
 ## A piece of code I am proud of
 
@@ -123,7 +127,7 @@
 
 <!-- Your name and, if you like, your GitHub profile link. For a team workshop, one line per person with what each one built. -->
 
-- **Your Name**
+- **Maalik McCutchen**
 
 ## Thanks
 
