@@ -211,8 +211,27 @@ public class UserInterface {
     }
 
     private void processRemoveVehicleRequest() {
+        Scanner myScanner = new Scanner(System.in);
+
+        Vehicle vehicleRemove = null;
+
+        System.out.print("Enter vehicle vin to remove: ");
+        int removeCar = myScanner.nextInt();
+
+        for (Vehicle vehicle : dealership.getAllVehicles()) {
+
+            if (vehicle.getVin() == removeCar) {
+                  vehicleRemove = vehicle;
+            }
+        }
+
+        if (vehicleRemove != null) {
+            dealership.removeVehicle(vehicleRemove);
+
+            DealershipFileManager dealershipSaveFile = new DealershipFileManager();
+            dealershipSaveFile.saveDealership(dealership);
+        }
 
     }
-
 
 }

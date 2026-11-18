@@ -142,7 +142,7 @@ public class Dealership {
     }
 
     public void removeVehicle(Vehicle removeCar) {
-
+        inventory.remove(removeCar);
     }
 
 }
