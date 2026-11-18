@@ -85,7 +85,8 @@ public class UserInterface {
 
             for (Vehicle vehicle : vehicles) {
 
-                System.out.println(vehicle);
+                System.out.print(vehicle.getVin() + "|" + vehicle.getYear() + "|" + vehicle.getMake() + "|" + vehicle.getModel() + "|" +
+                        vehicle.getVehicleType() + "|" + vehicle.getColor() + "|" + vehicle.getOdometer() + "|" + vehicle.getPrice() + "\n");
             }
     }
 
